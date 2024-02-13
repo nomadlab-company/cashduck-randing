@@ -359,10 +359,7 @@
             const value = decodeURIComponent(pair[1] || "");
             queryObject[key] = value;
         });
-        console.log(queryObject);
-        // if(queryObject[section] == 'last') {
         if(queryObject.section == 'last') {
-          console.log('2');
           moveToLastSection();
         }
       }
