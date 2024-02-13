@@ -103,6 +103,19 @@ function moveToFirstSection() {
   });
 }
 
+function moveToLastSection() {
+  if (currentSectionIdx === (section.length -1)) {
+    return;
+  }
+  currentSectionIdx = section.length -1;
+  handleStyle();
+
+  const animates = section[section.length -1].querySelectorAll('.aos-animate');
+  animates.forEach((animate) => {
+    animate.classList.remove('aos-animate');
+  });
+}
+
 // 이벤트
 addEventListener(
   'wheel',
