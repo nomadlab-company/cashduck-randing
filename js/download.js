@@ -26,5 +26,5 @@ function checkType() {
 
 btnCheck.addEventListener('click', () => {
   // checkType();
-  window.location.href = `https://nomadlab.page.link?link=https://api.cashduck.kr/user/cashduck&apn=com.nomadlab.reward&amv=3&ibi=com.nomadlab.reward&isi=954086662896&ipbi=com.nomadlab.reward&imv=1&ifl=https://cashduck.kr/&ipfl=&https://cashduck.kr/ofl=https://cashduck.kr/`;
+  window.location.href = `https://nomadlab.page.link?link=https://api.cashduck.kr/user/cashduck&apn=com.nomadlab.reward&amv=3&ibi=com.nomadlab.reward&isi=954086662896&ipbi=com.nomadlab.reward&imv=1&ifl=https://cashduck.kr/&ipfl=&https://cashduck.kr&/ofl=https://cashduck.kr/`;
 });
