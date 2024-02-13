@@ -362,7 +362,9 @@
             const value = decodeURIComponent(keyValue[1]);
             params[key] = value;
         });
+        console.log('1');
         if(params[section] == 'last') {
+          console.log('2');
           moveToLastSection();
         }
       }
