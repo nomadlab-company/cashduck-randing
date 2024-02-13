@@ -348,9 +348,8 @@
         mirror: true
       });
       window.onload = () => {
-        const queryString = window.location.search;
         const queryObject = {};
-        queryString = queryString.substring(1); // '?'를 제거하기 위해
+        const queryString = window.location.search.substring(1); // '?'를 제거하기 위해
     
         const params = queryString.split("&"); // '&'로 각 쿼리를 분리
     
