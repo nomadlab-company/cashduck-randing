@@ -348,22 +348,20 @@
         mirror: true
       });
       window.onload = () => {
-        queryString = window.location.search.substring(1);
-        // '&'로 분할하여 각 쿼리 매개변수를 배열로 분할
-        const queryParams = queryString.split("&");
-        
-        // 결과를 저장할 객체
-        const params = {};
-        
-        // 각 쿼리 매개변수를 파싱하여 params 객체에 저장
-        queryParams.forEach(function(param) {
-            const keyValue = param.split("=");
-            const key = decodeURIComponent(keyValue[0]);
-            const value = decodeURIComponent(keyValue[1]);
-            params[key] = value;
+        const queryString = window.location.search;
+        const queryObject = {};
+        queryString = queryString.substring(1); // '?'를 제거하기 위해
+    
+        const params = queryString.split("&"); // '&'로 각 쿼리를 분리
+    
+        params.forEach(function(param) {
+            const pair = param.split("="); // '='를 기준으로 키와 값을 분리
+            const key = decodeURIComponent(pair[0]);
+            const value = decodeURIComponent(pair[1] || "");
+            queryObject[key] = value;
         });
-        console.log(params[section]);
-        if(params[section] == 'last') {
+        console.log(queryObject);
+        if(queryObject[section] == 'last') {
           console.log('2');
           moveToLastSection();
         }
