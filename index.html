@@ -347,6 +347,25 @@
         once: false,
         mirror: true
       });
+      window.onload = () => {
+        queryString = window.location.search.substring(1);
+        // '&'로 분할하여 각 쿼리 매개변수를 배열로 분할
+        const queryParams = queryString.split("&");
+        
+        // 결과를 저장할 객체
+        const params = {};
+        
+        // 각 쿼리 매개변수를 파싱하여 params 객체에 저장
+        queryParams.forEach(function(param) {
+            const keyValue = param.split("=");
+            const key = decodeURIComponent(keyValue[0]);
+            const value = decodeURIComponent(keyValue[1]);
+            params[key] = value;
+        });
+        if(params[section] == 'footer') {
+          document.querySelector(`section[class*='footer']`).focus();
+        }
+      }
     </script>
   </body>
 </html>
