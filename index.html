@@ -362,8 +362,8 @@
             const value = decodeURIComponent(keyValue[1]);
             params[key] = value;
         });
-        if(params[section] == 'footer') {
-          document.querySelector(`section[class*='footer']`).focus();
+        if(params[section] == 'last') {
+          moveToLastSection();
         }
       }
     </script>
