@@ -140,5 +140,6 @@ addEventListener('touchend', (e) => {
 });
 
 btnLogo.addEventListener('click', () => {
-  moveToFirstSection();
+  // moveToFirstSection();
+  window.location.href = "/";
 });
